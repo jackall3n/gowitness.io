@@ -6,6 +6,8 @@ services:
     container_name: gowitness
     command: gowitness server --address :8080
     restart: unless-stopped
+    volumes:
+      - ./data:/data
     ports:
       - "8080:8080"
     networks:
